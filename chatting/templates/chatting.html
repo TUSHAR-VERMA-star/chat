@@ -10,17 +10,17 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body background="https://wallpapercave.com/wp/wp5471067.jpg">
 <div class=container>
-  
+  <font color="white">
     <h1>CHATTING SHATTING</h1>
     <form action='/' onsubmit="return validate()" method='post'> {% csrf_token %}
   <button type="submit" class="btn btn-danger">Message</button>
 </form>
 
-<hr><hr>
+<hr color="white"><hr color="white">
 {% for i in catprods|slice:"::-1" %}
-<li><b><font color="blue">{{ i.text }}</font></b>&nbsp&nbsp&nbsp&nbsp({{ i.name }})</li> <br>
+<li><font color="yellow">{{ i.text }}</font></b>&nbsp&nbsp&nbsp&nbsp({{ i.name }})</li> <br>
 {% endfor %}'
 
 <script type="text/javascript">
