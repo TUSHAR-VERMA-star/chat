@@ -15,8 +15,9 @@ def chatting(request):
         details={'name':Name,'text':Text,'catprods':catprods,'range':range(1,n)}
         return render(request,'chatting.html',details)
     else:
-        create=chattingkre(name=Name,text=Text)
-        create.save()
+        if Name and Text:
+            create=chattingkre(name=Name,text=Text)
+            create.save()
 
         catprods = chattingkre.objects.all()
         n=len(catprods)
