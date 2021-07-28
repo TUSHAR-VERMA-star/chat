@@ -14,7 +14,7 @@ SECRET_KEY = 'daq5+g3jbx184^l3f$36bx1z78$@8qj#i!48iwn6#d6274w@^b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','chattting.herokuapp.com']
 
 
 # Application definition
