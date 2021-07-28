@@ -8,7 +8,7 @@ def index(request):
 def chatting(request):
     Name = request.POST.get('name', 'No')
     Text=request.POST.get('message', 'No')
-    if Name=="No" and Text=="No":
+    if Name=="No" or Text=="No":
         catprods = chattingkre.objects.all()
         n=len(catprods)
         print(catprods)
@@ -17,7 +17,7 @@ def chatting(request):
     else:
         create=chattingkre(name=Name,text=Text)
         create.save()
-    
+
         catprods = chattingkre.objects.all()
         n=len(catprods)
         print(catprods)
