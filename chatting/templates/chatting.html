@@ -21,7 +21,11 @@
 <li><b>{{ i.text }}</b>&nbsp&nbsp&nbsp&nbsp({{ i.name }})</li> <br>
 {% endfor %}'
 
-
+<script type="text/javascript">
+window.setTimeout(function () {
+    location.href = "";
+}, 5000);
+</script>
 <form action='/' onsubmit="return validate()" method='post'> {% csrf_token %}
   <button type="submit" class="btn btn-dark">Message</button>
 </form>

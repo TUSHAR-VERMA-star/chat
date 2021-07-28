@@ -8,12 +8,18 @@ def index(request):
 def chatting(request):
     Name = request.POST.get('name', 'No')
     Text=request.POST.get('message', 'No')
+    if Name=="No" and Text=="No":
+        catprods = chattingkre.objects.all()
+        n=len(catprods)
+        print(catprods)
+        details={'name':Name,'text':Text,'catprods':catprods,'range':range(1,n)}
+        return render(request,'chatting.html',details)
+    else:
+        create=chattingkre(name=Name,text=Text)
+        create.save()
     
-    create=chattingkre(name=Name,text=Text)
-    create.save()
-
-    catprods = chattingkre.objects.all()
-    n=len(catprods)
-    print(catprods)
-    details={'name':Name,'text':Text,'catprods':catprods,'range':range(1,n)}
-    return render(request,'chatting.html',details)
+        catprods = chattingkre.objects.all()
+        n=len(catprods)
+        print(catprods)
+        details={'name':Name,'text':Text,'catprods':catprods,'range':range(1,n)}
+        return render(request,'chatting.html',details)
