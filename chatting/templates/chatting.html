@@ -8,19 +8,19 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>CHATTING SHATTING</title>
   </head>
-  <body>
+  <body background="https://wallpapercave.com/wp/wp5471067.jpg">
 <div class=container>
-  
+  <font color="white">
     <h1>CHATTING SHATTING</h1>
     <form action='/' onsubmit="return validate()" method='post'> {% csrf_token %}
   <button type="submit" class="btn btn-danger">Message</button>
 </form>
 
-<hr><hr>
+<hr color="white"><hr color="white">
 {% for i in catprods|slice:"::-1" %}
-<li><b><font color="blue">{{ i.text }}</font></b>&nbsp&nbsp&nbsp&nbsp({{ i.name }})</li> <br>
+<li><font color="yellow">{{ i.text }}</font></b>&nbsp&nbsp&nbsp&nbsp({{ i.name }})</li> <br>
 {% endfor %}'
 
 <script type="text/javascript">
